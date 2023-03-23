@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
 const connectDB = require('./db/connect');
+const router = require('./routes/User');
 require('dotenv').config();
 
-// app.get('/', (req, res) => {
-//   res.send('hello');
-//   console.log('check')
-// })
+// payload
+app.use(express.json())
+
+// register
+app.use("/api", router)
+
+
 const port = process.env.PORT || 5000
 const start = async () => {
   try {
