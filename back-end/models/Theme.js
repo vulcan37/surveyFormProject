@@ -33,6 +33,11 @@ const themeSchema = new mongoose.Schema({
   color: {
     type: String,
     default: '#000000'
+  },
+  formId: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Survey',
+    required: true,
   }
 });
 
