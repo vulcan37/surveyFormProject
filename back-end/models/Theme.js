@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const themeSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -33,12 +34,8 @@ const themeSchema = new mongoose.Schema({
   color: {
     type: String,
     default: '#000000'
-  },
-  formId: {
-    type: mongoose.Types.ObjectId,
-    ref: 'Survey',
-    required: true,
   }
 });
 
 const Theme = mongoose.model('Theme', themeSchema);
+module.exports = Theme
