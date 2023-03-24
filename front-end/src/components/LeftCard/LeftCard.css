@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+}
+.left-card-h2 {
+  position: relative;
+  top: 250px;
+  left: 197px;
+  letter-spacing: 0.47px;
+  color: #5c5c5c;
+  opacity: 1;
+  font-size: 30px;
+}
+.left-card-p {
+  position: relative;
+  top: 230px;
+  left: 197px;
+  font-size: 30px;
+  letter-spacing: 0.47px;
+  color: #5c5c5c;
+  opacity: 1;
+}
+.left-card-p2 {
+  position: relative;
+  top: 210px;
+  left: 197px;
+  font-size: 30px;
+  letter-spacing: 0.47px;
+  color: #5c5c5c;
+  opacity: 1;
+}
+.left-card-msg {
+  position: relative;
+  top: 220px;
+  left: 140px;
+  width: 340px;
+  height: 24px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: #808080;
+  opacity: 1;
+}
+.leftcard-message {
+  position: relative;
+  top: 240px;
+  left: 197px;
+  text-align: left;
+  font: normal normal normal 16px/26px Avenir;
+  letter-spacing: 0.64px;
+  color: #565657;
+  text-transform: capitalize;
+}
+.leftcard-btn {
+  position: relative;
+  top: 260px;
+  left: 197px;
+  width: 215px;
+  height: 55px;
+  border-style: none;
+  border-color: white;
+  background: #278df1 0% 0% no-repeat padding-box;
+  border-radius: 28px;
+  text-align: center;
+  font: normal normal 18px Montserrat;
+  letter-spacing: 1.8px;
+  color: #ffffff;
+  opacity: 0.79;
+}
