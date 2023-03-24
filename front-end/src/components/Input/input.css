@@ -1,0 +1,21 @@
+.input-field {
+  left: 1264px;
+  width: 320px;
+  border: none;
+  border-bottom: 1px solid #989898;
+  outline: none; /* This will remove the focus outline */
+  opacity: 1;
+  line-height: 2;
+}
+
+.input-field::placeholder {
+  /* Layout Properties */
+  width: 322px;
+  height: 27px;
+  /* UI Properties */
+  text-align: left;
+  font: normal normal normal 17px/27px Open Sans;
+  letter-spacing: 0.6px;
+  color: #77838f;
+  opacity: 1;
+}
