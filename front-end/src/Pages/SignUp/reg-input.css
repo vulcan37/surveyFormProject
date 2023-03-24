@@ -1,0 +1,25 @@
+.reg-input-field {
+    position: relative;
+    top: 60px;
+    left: 80px;
+    width: 260px;
+    border: none;
+    border-bottom: 1px solid #989898;
+    margin: 0 100px 25px 0;
+    outline: none; /* This will remove the focus outline */
+    opacity: 1;
+    line-height: 2;
+  }
+  
+  .reg-input-field::placeholder {
+    /* Layout Properties */
+    width: 322px;
+    height: 27px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838f;
+    opacity: 1;
+  }
+  
