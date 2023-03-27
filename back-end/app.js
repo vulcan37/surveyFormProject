@@ -4,12 +4,20 @@ const connectDB = require('./db/connect');
 const router = require('./routes/User');
 require('dotenv').config();
 const themeRouter = require('./routes/Theme')
+const survey = require("./routes/Survey");
+const questions = require("./routes/Questions");
 
 // payload
 app.use(express.json())
 
 // register
 app.use("/api", router)
+
+//survey
+app.use("/api", survey);
+
+//questions
+app.use("/api", questions);
 
 //theme router
 app.use('/api/v1/themes', themeRouter)
