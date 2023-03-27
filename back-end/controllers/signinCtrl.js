@@ -21,6 +21,7 @@ const signinCtrl = async (req, res) => {
         res.status(200).json({
             status: 'Success',
             data: {
+                userId: userFound._id,
                 name: userFound.name,
                 email: userFound.email,
                 token: generateToken(userFound._id)
