@@ -2,7 +2,7 @@ import SignUp from "./Pages/SignUp/SignUp";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SignIn from "./Pages/SignIn/SignIn";
 import ThemeApp from "./ThemeApp";
-
+import './Theme1.css'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" Component={SignIn} />
           <Route path="/register" Component={SignUp} />
-          <Route path="/theme" component={ThemeApp} />
+          <Route path="/theme" Component={ThemeApp} />
         </Routes>
       </BrowserRouter>
     </div>
