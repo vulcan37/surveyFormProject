@@ -1,8 +1,9 @@
 import SignUp from "./Pages/SignUp/SignUp";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SignIn from "./Pages/SignIn/SignIn";
-import ThemeApp from "./ThemeApp";
-import './Theme1.css'
+import LogOut from "./Pages/Logout/LogOut";
+
+
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" Component={SignIn} />
           <Route path="/register" Component={SignUp} />
-          <Route path="/theme" Component={ThemeApp} />
+          <Route path="/logout" Component={LogOut} />
         </Routes>
       </BrowserRouter>
     </div>
