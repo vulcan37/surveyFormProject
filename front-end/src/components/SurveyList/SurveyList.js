@@ -34,7 +34,7 @@ function SurveyList() {
       });
   };
   return (
-    <div>
+    <div className="container">
       <div className="d-flex justify-content-between m-3">
         <div className="d-flex gap-4">
           <span>Survey List</span>
