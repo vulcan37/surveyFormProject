@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
+const cors = require("cors")
 const connectDB = require('./db/connect');
 const router = require('./routes/User');
 require('dotenv').config();
 const themeRouter = require('./routes/Theme')
+
+//allowing cross origin resource sharing
+app.use(cors())
 
 // payload
 app.use(express.json())
