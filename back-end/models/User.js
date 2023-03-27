@@ -5,10 +5,16 @@ const UserSchema = new mongoose.Schema(
         name: {
             type: String,
             required: true,
+            minLength: [5, 'name should be 5 character long'],
         },
         email: {
             type: String,
             required: true,
+            match: [
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                'Please provide a valid email',
+            ],
+            unique: true,
         },
         phone: {
             type: Number,
@@ -16,7 +22,8 @@ const UserSchema = new mongoose.Schema(
         },
         password: {
             type: String,
-            required: true
+            required: true,
+            minlength: [8, 'password should contain atleast 8 characters']
         },
         profession: {
             type: String,
