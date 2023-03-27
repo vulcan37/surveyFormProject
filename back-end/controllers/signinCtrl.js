@@ -9,16 +9,16 @@ const signinCtrl = async (req, res) => {
         // check if email exist
         const userFound = await User.findOne({ email })
         if (!userFound) {
-            return res.json("Invalid login credentials")
+            return res.status(400).json({ error: "Invalid login credentials" })
         }
         // console.log(userFound);
         // verify password
         const isPasswordMatched = await bcrypt.compare(password, userFound.password)
 
         if (!isPasswordMatched) {
-            return res.json("Invalid login credentials")
+            return res.status(400).json({ error: "Invalid login credentials" })
         }
-        res.json({
+        res.status(200).json({
             status: 'Success',
             data: {
                 name: userFound.name,
@@ -27,7 +27,8 @@ const signinCtrl = async (req, res) => {
             }
         })
     } catch (error) {
-        res.json(error.message)
+        console.log(error);
+        res.status(400).json(error)
     }
 }
 
