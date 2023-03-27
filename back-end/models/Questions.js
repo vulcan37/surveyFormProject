@@ -3,17 +3,17 @@ const mongoose = require("mongoose");
 const questionSchema = new mongoose.Schema(
   {
     questions: {
-      type: Array,
+      type: String,
     },
     option: {
       type: Array,
     },
-    correct: {
-      type: String,
+    response: {
+      type: Array,
     },
   },
   { timestamps: true }
 );
 
-const questionModel = mongoose.model("qustions", questionSchema);
+const questionModel = mongoose.model("questions", questionSchema);
 module.exports = questionModel;
