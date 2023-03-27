@@ -24,7 +24,6 @@ const surveySchema = new mongoose.Schema(
     },
     typeOfSurvey: {
       type: String,
-      require: true,
     },
     image: { type: String, required: true },
   },
