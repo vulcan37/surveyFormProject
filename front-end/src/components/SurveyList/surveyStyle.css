@@ -1,0 +1,10 @@
+.table-head {
+  background: #f8faff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 8px #00000029;
+  opacity: 1;
+}
+.table-data {
+  background: #fafdff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-top: 15px;
+}
