@@ -1,5 +1,5 @@
 
-function SinglePage({ surveyQuestions, surveyOptions, selectedOptions, handleOptionChange, inputType, onHandleSubmit }) {
+function SinglePage({ surveyQuestions, surveyOptions, selectedOptions, handleOptionChange, inputType, onHandleSubmit, theme }) {
 
   return (
     <form onSubmit={(e) => {
@@ -8,10 +8,10 @@ function SinglePage({ surveyQuestions, surveyOptions, selectedOptions, handleOpt
 
     }}>
       {surveyQuestions.map((question, index) => (
-        <div key={index} className='question-class'>
-          <h3 className='question-number' >{`Question ${index + 1}`}</h3>
+        <div key={index} className={`question-class${theme}`}>
+          <h3 className={`question-number${theme}`}> {`Question ${index + 1}`}</h3>
           <div>{question}</div>
-          <ul className="options-class">
+          <ul className={`options-class${theme}`}>
             {surveyOptions[index].map((option, optionIndex) => (
               <li key={optionIndex}>
                 <label>
@@ -28,7 +28,7 @@ function SinglePage({ surveyQuestions, surveyOptions, selectedOptions, handleOpt
           </ul>
         </div>
       ))}
-      <button type="submit" className="submit-button-for-single-page">Submit</button>
+      <button type="submit" className={`submit-button-for-single-page${theme}`}>Submit</button>
     </form>
   );
 }

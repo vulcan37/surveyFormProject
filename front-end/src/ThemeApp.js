@@ -33,15 +33,15 @@ function ThemeApp() {
       <button onClick={() => setShowThemeSettings(true)}>Theme Settings</button>
       {showThemeSettings && <ThemeSettings theme={theme} save={saveThemeSettings} close={closeThemeSettings} />}
 
-      <div className="button-group">
+      <div className={`button-group${theme.name}`}>
         <h3 style={{}}>🡠 Preview</h3>
         <button
-          className="close-Preview"
+          className={`close-Preview${theme.name}`}
         >
           Close Preview
         </button>
         <button
-          className="save-button"
+          className={`save-button${theme.name}`}
         >
           Save
         </button>

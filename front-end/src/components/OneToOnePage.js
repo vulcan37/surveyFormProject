@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function OneToOnePage({ questions, options, selectedOptions, handleOptionChange, skipEnabled, inputType, onHandleSubmit }) {
+function OneToOnePage({ questions, options, selectedOptions, handleOptionChange, skipEnabled, inputType, onHandleSubmit, theme }) {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleNextPage = () => {
@@ -15,10 +15,10 @@ function OneToOnePage({ questions, options, selectedOptions, handleOptionChange,
   };
 
   return (
-    <div className='question-class'>
-      <h3 className='question-number '>{`Question ${currentPage + 1}`}</h3>
+    <div className={`question-class${theme}`}>
+      <h3 className={`question-number${theme}`}>{`Question ${currentPage + 1}`}</h3>
       <div>{questions[currentPage]}</div>
-      <ul className='options-class'>
+      <ul className={`options-class${theme}`}>
         {options[currentPage].map((option, optionIndex) => (
           <li key={optionIndex}>
             <label>
@@ -33,7 +33,7 @@ function OneToOnePage({ questions, options, selectedOptions, handleOptionChange,
           </li>
         ))}
       </ul>
-      <div className='button-group-for-OneToOnePage'>
+      <div className={`button-group-for-OneToOnePage${theme}`}>
         <button onClick={handlePrevPage} disabled={currentPage === 0}>
           Previous
         </button>
@@ -41,7 +41,7 @@ function OneToOnePage({ questions, options, selectedOptions, handleOptionChange,
           Next
         </button>
         {skipEnabled && <button onClick={handleSkipClick} disabled={currentPage === questions.length - 1}>Skip</button>}
-        {currentPage === questions.length - 1 && <button onClick={onHandleSubmit} className='submitbutton'>submit</button>}
+        {currentPage === questions.length - 1 && <button onClick={onHandleSubmit} className={`submitbutton${theme}`}>submit</button>}
       </div>
     </div >)
 }

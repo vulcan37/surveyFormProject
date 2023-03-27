@@ -54,8 +54,8 @@ const Preview = ({ surveyQuestions, surveyOptions, themeSettings }) => {
         ))}
         <button type="submit">Submit</button>
       </form> */}
-      {themeSettings.formType === 'One to one' && <OneToOnePage questions={surveyQuestions} options={surveyOptions} handleOptionChange={handleOptionChange} selectedOptions={selectedOptions} skipEnabled={themeSettings.skipButton === 'yes' ? true : false} inputType={themeSettings.optionType} onHandleSubmit={onHandleSubmit} />}
-      {themeSettings.formType === 'single-page' && <SinglePage surveyQuestions={surveyQuestions} surveyOptions={surveyOptions} handleOptionChange={handleOptionChange} selectedOptions={selectedOptions} inputType={themeSettings.optionType} onHandleSubmit={onHandleSubmit} />}
+      {themeSettings.formType === 'One to one' && <OneToOnePage questions={surveyQuestions} options={surveyOptions} handleOptionChange={handleOptionChange} selectedOptions={selectedOptions} skipEnabled={themeSettings.skipButton === 'yes' ? true : false} inputType={themeSettings.optionType} onHandleSubmit={onHandleSubmit} theme={themeSettings.name} />}
+      {themeSettings.formType === 'single-page' && <SinglePage surveyQuestions={surveyQuestions} surveyOptions={surveyOptions} handleOptionChange={handleOptionChange} selectedOptions={selectedOptions} inputType={themeSettings.optionType} onHandleSubmit={onHandleSubmit} theme={themeSettings.name} />}
       {!error && <div style={{ color: 'red' }}>All Questions are mandatory</div>}
     </div>
   );
