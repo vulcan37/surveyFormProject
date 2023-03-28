@@ -14,7 +14,7 @@ function SurveyList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/list").then((res) => {
+    axios.get("http://localhost:5000/api/v1/list").then((res) => {
       setSurveyData(res.data);
     });
   }, []);
@@ -22,7 +22,7 @@ function SurveyList() {
   const deleteSurvey = async (id) => {
     console.log(id);
     await axios
-      .post("http://localhost:8080/api/delete", { id })
+      .post("http://localhost:5000/api/v1/delete", { id })
       .then((res) => {
         swal("Good job!", `${res.data.message}`, "success");
         setTimeout(() => {

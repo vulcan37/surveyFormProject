@@ -43,7 +43,7 @@ function SignUp() {
                 return
             }
 
-            const response = await axios.post("http://localhost:5000/api/register", formData)
+            const response = await axios.post("http://localhost:5000/api/v1/register", formData)
             console.log(response);
             if (response.data.status === 'success') {
                 const user = response.data.data

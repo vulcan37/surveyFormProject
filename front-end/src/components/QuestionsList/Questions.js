@@ -37,7 +37,7 @@ function Questions() {
       ],
     };
     axios
-      .post("http://localhost:8080/api/questions", questions)
+      .post("http://localhost:5000/api/v1/questions", questions)
       .then((res) => {
         console.log(res);
       })
