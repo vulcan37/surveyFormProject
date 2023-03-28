@@ -4,23 +4,31 @@ const themeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  type: {
+  theme: {
     type: String,
     enum: ['light', 'dark'],
     default: 'light'
   },
+  type: {
+    type: String,
+    default: 'Survey',
+    enum: ['Survey']
+
+  },
   formType: {
     type: String,
-    enum: ['one-one', 'single-page', 'multi-page'],
+    enum: ['One to one', 'single-page'],
     default: 'single-page'
   },
-  allQuestionsMandatory: {
-    type: Boolean,
-    default: false
+  mandatory: {
+    type: String,
+    default: 'yes',
+    enum: ['no', 'yes']
   },
-  showSkipButton: {
-    type: Boolean,
-    default: true
+  skipButton: {
+    type: String,
+    default: 'no',
+    enum: ['no', 'yes']
   },
   optionType: {
     type: String,
@@ -29,12 +37,13 @@ const themeSchema = new mongoose.Schema({
   },
   font: {
     type: String,
-    default: 'roboto'
+    default: 'Roboto'
   },
   color: {
     type: String,
-    default: '#000000'
-  }
+    default: 'black'
+  },
+  surveyId: { type: mongoose.Schema.Types.ObjectId, ref: 'Survey', required: true }
 });
 
 const Theme = mongoose.model('Theme', themeSchema);

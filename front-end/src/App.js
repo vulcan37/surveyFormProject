@@ -37,7 +37,7 @@ function App() {
         <Route path="/questions" element={<Questions />} />
         <Route path="/update" element={<UpdateSurveyList />} />
         <Route path="/theme" element={<ThemeApp />} />
-      </Routes>
+     </Routes>
     </div>
   );
 }
