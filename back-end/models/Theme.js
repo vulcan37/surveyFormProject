@@ -12,7 +12,7 @@ const themeSchema = new mongoose.Schema({
   type: {
     type: String,
     default: 'Survey',
-    enum: [Survey]
+    enum: ['Survey']
 
   },
   formType: {
