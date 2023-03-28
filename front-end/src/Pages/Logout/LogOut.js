@@ -8,9 +8,9 @@ function LogOut() {
         try {
             // Delete the JWT token from local storage
             localStorage.removeItem('token');
-            // Send logout request to backend
-            await axios.post('http://localhost:5000/api/logout');
-            // Redirect the user to the login page
+            // // Send logout request to backend
+            // await axios.post('http://localhost:5000/api/v1/logout');
+            // // Redirect the user to the login page
             navigate('/')
         } catch (error) {
             console.error(error)

@@ -17,7 +17,7 @@ const UpdateSurveyList = () => {
   useEffect(() => {
     setId(localStorage.getItem("key"));
     axios
-      .post("http://localhost:8080/api/listupdate", { id })
+      .post("http://localhost:5000/api/v1/listupdate", { id })
       .then((res) => {
         setData(res.data);
         setName(res.data.name);
@@ -45,7 +45,7 @@ const UpdateSurveyList = () => {
     };
 
     axios
-      .post("http://localhost:8080/api/update", data)
+      .post("http://localhost:5000/api/v1/update", data)
       .then((res) => {
         swal("Good job!", `${res.data.message}`, "success");
         setTimeout(() => {

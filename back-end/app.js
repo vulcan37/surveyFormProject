@@ -7,6 +7,7 @@ require('dotenv').config();
 const themeRouter = require('./routes/Theme')
 const survey = require("./routes/Survey");
 const questions = require("./routes/Questions");
+const Authorise = require('./middlewares/Authorise');
 
 //allowing cross origin resource sharing
 app.use(cors())
@@ -15,16 +16,17 @@ app.use(cors())
 app.use(express.json())
 
 // register
-app.use("/api", router)
+app.use("/api/v1", router)
 
 //survey
-app.use("/api", survey);
+app.use("/api/v1", Authorise, survey);
 
 //questions
-app.use("/api", questions);
+app.use("/api/v1", Authorise, questions);
 
 //theme router
 app.use('/api/v1/themes', themeRouter)
+
 const port = process.env.PORT || 5000
 const start = async () => {
   try {

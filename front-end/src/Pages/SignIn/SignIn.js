@@ -14,9 +14,9 @@ function SignIn() {
     const handleLogin = async event => {
         event.preventDefault()
         try {
-            const response = await axios.post("http://localhost:5000/api/signin", { email, password })
+            const response = await axios.post("http://localhost:5000/api/v1/signin", { email, password })
             const token = response.data.data.token
-            console.log(response);
+            console.log(response.data.status);
             // console.log(token);
             localStorage.setItem('token', token)
             const authToken = localStorage.getItem('token')
@@ -26,17 +26,18 @@ function SignIn() {
                 'Authorization': `Bearer ${authToken}`
             };
             // to send token as header object to ...
-            const response2 = await axios.post("http://localhost:5000/api/logout", {}, { headers })
+            const response2 = await axios.get("http://localhost:5000/api/v1/list", { headers })
             console.log(response2)
+
             if (response.data.status === 'Success') {
-                const user = response.data.data
                 setError(null)
                 setEmail("")
                 setPassword("")
-                console.log(user)
+                navigate("/list")
             }
 
         } catch (error) {
+            console.log(error);
             const errorMessage = error.response.data.error;
             setError(errorMessage)
         }

@@ -25,7 +25,7 @@ function CreateSurvey() {
       img: img,
     };
     await axios
-      .post("http://localhost:8080/api/createsurvey", data, img)
+      .post("http://localhost:5000/api/v1/createsurvey", data, img)
       .then((res) => {
         console.log(res);
         setName("");
@@ -51,7 +51,7 @@ function CreateSurvey() {
         <div className="d-flex justify-content-between">
           <h4>Create Survey</h4>
           <div className="d-flex gap-3">
-            <button className="cancel" onClick={() => navigate("/")}>
+            <button className="cancel" onClick={() => navigate("/list")}>
               Cancel
             </button>
             <button className="next" onClick={surveyDataStore}>

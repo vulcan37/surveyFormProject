@@ -11,7 +11,5 @@ router.post("/register", registerCtrl)
 // signin user endpoint
 router.post("/signin", signinCtrl)
 
-// logout route
-router.post("/logout", logoutCtrl)
 
 module.exports = router
