@@ -1,11 +1,12 @@
 const jwt = require("jsonwebtoken")
-const verifyToken = token => {
-    return jwt.verify(token, process.JWT_KEY, (err, decoded) => {
-        if (err) {
-            return false
-        }
-        return decoded
-    })
+
+const verifyToken = async (token) => {
+  try {
+    const decoded = await jwt.verify(token, process.env.JWT_KEY)
+    return decoded
+  } catch (err) {
+    return false
+  }
 }
 
 module.exports = verifyToken

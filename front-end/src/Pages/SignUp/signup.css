@@ -4,7 +4,7 @@
 body {
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 .register-form-field {
   position: absolute;
@@ -69,4 +69,20 @@ body {
   letter-spacing: 1.8px;
   color: #ffffff;
   opacity: 0.79;
+}
+
+.anchor input {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  top: 4px;
+  left: -5px;
+  color: #f5f9fe;
+  border: 1px solid #707070;
+  border-radius: 3px;
+}
+.error-msg {
+  position: relative;
+  top: 100px;
+  left: 80px;
 }

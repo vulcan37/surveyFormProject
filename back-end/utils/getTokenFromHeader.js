@@ -1,8 +1,9 @@
 const getTokenFromHeader = req => {
     const headerObj = req.headers
-    const token = headerObj['authorization'].split(" ")[1]
+    const authHeader = headerObj.authorization
 
-    if (token !== undefined) {
+    if (authHeader && authHeader.split(" ")[0] === "Bearer") {
+        const token = authHeader.split(" ")[1]
         return token
     }
     else {

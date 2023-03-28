@@ -2,10 +2,16 @@ import SignUp from "./Pages/SignUp/SignUp";
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from 'react-router-dom'
 import SignIn from "./Pages/SignIn/SignIn";
+import LogOut from "./Pages/Logout/LogOut";
+import CreateSurvey from "./components/CreateSurveyList/CreateSurvey";
+import SurveyList from "./components/SurveyList/SurveyList";
+import Questions from "./components/QuestionsList/Questions";
+import UpdateSurveyList from "./components/Update Survey/UpdateSurveyList";
 import ThemeApp from "./ThemeApp";
-import './Theme1.css'
+
 
 function App() {
+  // const token = localStorage.getItem()
   const location = useLocation();
 
   useEffect(() => {
@@ -22,13 +28,14 @@ function App() {
   }, [location.pathname]);
   return (
     <div className="App">
-
-      <Routes>
-        <Route path="/" Component={SignIn} />
-        <Route path="/register" Component={SignUp} />
-        <Route path="/theme" Component={ThemeApp} />
-      </Routes>
-    </div >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" Component={SignIn} />
+          <Route path="/register" Component={SignUp} />
+          <Route path="/theme" Component={ThemeApp} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

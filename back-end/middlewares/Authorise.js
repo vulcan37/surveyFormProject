@@ -1,5 +1,5 @@
-import getTokenFromHeader from "../utils/getTokenFromHeader"
-import verifyToken from "../utils/verifyToken"
+const getTokenFromHeader = require("../utils/getTokenFromHeader")
+const verifyToken = require("../utils/verifyToken")
 
 const Authorise = (req, res, next) => {
     // get token from header
