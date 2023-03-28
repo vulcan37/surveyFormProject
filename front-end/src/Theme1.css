@@ -79,7 +79,6 @@ button:disabled {
   display: flex;
   margin-top: 40px;
   margin-left: 30px;
-  justify-content: flex-start;
 }
 .question-classTheme2 {
   margin-left: 70px;

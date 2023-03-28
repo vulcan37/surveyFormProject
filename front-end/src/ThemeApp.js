@@ -1,6 +1,7 @@
 import ThemeSettings from "./components/ThemeSettings";
 import { useState } from "react";
 import './App.css';
+import './Theme1.css'
 import Preview from "./components/Preview";
 function ThemeApp() {
   const [theme, setTheme] = useState({
