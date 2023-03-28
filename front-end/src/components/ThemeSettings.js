@@ -54,7 +54,7 @@ function ThemeSettings({ save, close }) {
             <div>Theme</div>
             <select id="theme-mode" value={theme} onChange={e => setTheme(e.target.value)}>
               <option value="light">light</option>
-              <option value="dark">dark</option>
+              <option value="dark">dark(disabled)</option>
             </select>
             <br />
           </div>
@@ -67,6 +67,9 @@ function ThemeSettings({ save, close }) {
             <select className="row2" value={name} onChange={e => setName(e.target.value)}>
               <option value="Theme1">Theme1</option>
               <option value="Theme2">Theme2</option>
+              <option value="Theme3">Theme3</option>
+              <option value="Theme4">Theme4(plain html)</option>
+
             </select>
             <select className="row2" value={type} onChange={e => setType(e.target.value)}>
               <option value="survey">survey</option>

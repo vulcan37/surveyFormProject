@@ -1,4 +1,4 @@
-.close-PreviewTheme1 {
+.close-Preview {
   border: 2px solid #707070;
   border-radius: 4px;
   width: 100px;
@@ -7,7 +7,7 @@
   color: #278df1;
   margin-left: 70%;
 }
-.save-buttonTheme1 {
+.save-button {
   background-color: #278df1;
   color: white;
   border-radius: 4px;
@@ -75,9 +75,113 @@ li {
 button:disabled {
   cursor: not-allowed;
 }
-.button-groupTheme1 {
+.button-group {
   display: flex;
   margin-top: 40px;
   margin-left: 30px;
-  justify-content: start;
+  justify-content: flex-start;
+}
+.question-classTheme2 {
+  margin-left: 70px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 1px solid rgb(203, 172, 115);
+  background-image: url("https://media.istockphoto.com/vectors/blurry-triangle-texture-for-wallpaper-presentation-background-design-vector-id1152661147?k=6&m=1152661147&s=170667a&w=0&h=80TK3R2WJHrz2OryEYqnXC707RPJ2e3QUQPx7pEEg1c=");
+  background-repeat: repeat;
+  margin-bottom: 30px;
+
+  text-align: center;
+  margin-right: 80px;
+  border-radius: 4%;
+}
+.question-numberTheme2 {
+  font: normal normal 600 18px/24px Open Sans;
+  letter-spacing: 0.54px;
+  color: #07315e;
+}
+.question-textTheme2 {
+  font-size: larger;
+}
+.button-group-for-OneToOnePageTheme2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-group-for-OneToOnePageTheme2 button {
+  border: 2px solid #707070;
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  font: normal normal bold 14px / 18px Open Sans;
+  color: #278df1;
+  margin-right: 40px;
+  margin-top: 100px;
+}
+.submitbuttonTheme2 {
+  background-color: #278df1;
+  color: white !important;
+}
+button:disabled {
+  cursor: not-allowed !important;
+  background-color: #b4cdf5 !important;
+}
+.submit-button-for-single-pageTheme2 {
+  margin: 40px 45%;
+  background-color: #3286dd;
+  border: 2px solid #707070;
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  font: normal normal bold 14px / 18px Open Sans;
+  color: white;
+}
+.justforTheme3 {
+  margin: 60px 15% 0 15%;
+  border-radius: 2%;
+  padding: 40px;
+  background-color: aliceblue;
+}
+.options-classTheme3 li {
+  margin-bottom: 20px;
+}
+
+.options-classTheme3 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(220, 212, 212);
+}
+.button-group-for-OneToOnePageTheme3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.button-group-for-OneToOnePageTheme3 button {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.question-textTheme3 {
+  font-weight: bolder !important;
+  font-size: larger !important;
+}
+.question-numberTheme3 {
+  color: #4285f4;
+}
+.submit-button-for-single-pageTheme3 {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 40%;
+}
+body {
+  background-color: rgb(243, 240, 237);
 }

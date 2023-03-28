@@ -22,7 +22,7 @@ const Preview = ({ surveyQuestions, surveyOptions, themeSettings }) => {
 
 
   return (
-    <div
+    <div className={`justfor${themeSettings.name}`}
       style={{
         backgroundColor: themeSettings.backgroundColor,
         color: themeSettings.color,

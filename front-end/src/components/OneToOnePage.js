@@ -17,7 +17,8 @@ function OneToOnePage({ questions, options, selectedOptions, handleOptionChange,
   return (
     <div className={`question-class${theme}`}>
       <h3 className={`question-number${theme}`}>{`Question ${currentPage + 1}`}</h3>
-      <div>{questions[currentPage]}</div>
+      <div className={`question-text${theme}`}>{questions[currentPage]}</div>
+      {theme === 'Theme3' && <div style={{ fontSize: 'smaller' }}>choose one of the options</div>}
       <ul className={`options-class${theme}`}>
         {options[currentPage].map((option, optionIndex) => (
           <li key={optionIndex}>

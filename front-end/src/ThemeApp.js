@@ -16,7 +16,7 @@ function ThemeApp() {
   });
 
   const [showThemeSettings, setShowThemeSettings] = useState(false);
-  const questions = ['this is question1', 'this is question2', 'this is question3'];
+  const questions = ['this is question1', 'this is question2', 'this is question3']; //'this is'
   const options = [['option1', 'option2', 'option3'], ['option1', 'option2'], ['option1', 'option2', 'option3', 'option4']]
 
   function saveThemeSettings(updatedTheme) {
@@ -33,15 +33,15 @@ function ThemeApp() {
       <button onClick={() => setShowThemeSettings(true)}>Theme Settings</button>
       {showThemeSettings && <ThemeSettings theme={theme} save={saveThemeSettings} close={closeThemeSettings} />}
 
-      <div className={`button-group${theme.name}`}>
+      <div className={`button-group`}>
         <h3 style={{}}>🡠 Preview</h3>
         <button
-          className={`close-Preview${theme.name}`}
+          className={`close-Preview`}
         >
           Close Preview
         </button>
         <button
-          className={`save-button${theme.name}`}
+          className={`save-button`}
         >
           Save
         </button>

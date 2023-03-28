@@ -18,7 +18,7 @@ app.use(express.json())
 app.use("/api", router)
 
 //survey
-app.use("/api", survey);
+app.use("/api/v1/survey", survey);
 
 //questions
 app.use("/api", questions);
