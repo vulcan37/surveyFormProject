@@ -27,7 +27,11 @@ const UserSchema = new mongoose.Schema(
         },
         profession: {
             type: String,
-        }
+        },
+        token: {
+            type: String,
+            default: '',
+        },
     },
     { timestamps: true }
 )
