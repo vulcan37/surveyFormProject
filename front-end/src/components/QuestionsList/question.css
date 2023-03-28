@@ -1,4 +1,6 @@
-button {
+.prev,
+.save,
+.add-question {
   width: 150px;
   height: 46px;
   border-radius: 4px;
@@ -77,11 +79,11 @@ button {
   height: 38px;
   width: 130px;
 }
-.display-popup{
+.display-popup {
   float: right;
   margin-top: -190px;
   margin-right: 10px;
 }
-.question-type span{
+.question-type span {
   float: right;
 }

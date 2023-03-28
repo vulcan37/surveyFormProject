@@ -6,10 +6,9 @@ body {
 }
 .field-container {
   margin-top: 15px;
-  /* margin-bottom: 10px; */
 }
 .field-container input[type="text"] {
-  width: 100%;
+  width: 40%;
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #cccccc;
   border-radius: 4px;
