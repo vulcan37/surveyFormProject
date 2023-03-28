@@ -29,10 +29,15 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" Component={SignIn} />
-        <Route path="/register" Component={SignUp} />
-        <Route path="/theme" Component={ThemeApp} />
-      </Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/register" element={<SignUp />} />
+        <Route path="/logout" element={<LogOut />} />
+        <Route path="/create" element={<CreateSurvey />} />
+        <Route path="/list" element={<SurveyList />} />
+        <Route path="/questions" element={<Questions />} />
+        <Route path="/update" element={<UpdateSurveyList />} />
+        <Route path="/theme" element={<ThemeApp />} />
+     </Routes>
     </div>
   );
 }
