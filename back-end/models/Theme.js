@@ -27,7 +27,7 @@ const themeSchema = new mongoose.Schema({
   },
   skipButton: {
     type: String,
-    default: no,
+    default: 'no',
     enum: ['no', 'yes']
   },
   optionType: {
