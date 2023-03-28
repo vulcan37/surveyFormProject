@@ -34,7 +34,7 @@ const themeSchema = new mongoose.Schema({
   color: {
     type: String,
     default: '#000000'
-  }
+  },
 });
 
 const Theme = mongoose.model('Theme', themeSchema);
