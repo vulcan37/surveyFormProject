@@ -28,13 +28,11 @@ function App() {
   }, [location.pathname]);
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" Component={SignIn} />
-          <Route path="/register" Component={SignUp} />
-          <Route path="/theme" Component={ThemeApp} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" Component={SignIn} />
+        <Route path="/register" Component={SignUp} />
+        <Route path="/theme" Component={ThemeApp} />
+      </Routes>
     </div>
   );
 }
