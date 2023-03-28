@@ -43,7 +43,7 @@ const themeSchema = new mongoose.Schema({
     type: String,
     default: 'black'
   },
-  surveyId: { type: mongoose.Schema.Types.ObjectId, ref: 'Survey', required: true }
+  surveyId: { type: mongoose.Schema.Types.ObjectId, ref: 'Surveys', required: true }
 });
 
 const Theme = mongoose.model('Theme', themeSchema);
