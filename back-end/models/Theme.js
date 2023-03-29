@@ -41,9 +41,10 @@ const themeSchema = new mongoose.Schema({
   },
   color: {
     type: String,
-    default: 'black'
+    default: '#000000'
   },
   surveyId: { type: mongoose.Schema.Types.ObjectId, ref: 'Surveys', required: true }
+
 });
 
 const Theme = mongoose.model('Theme', themeSchema);
