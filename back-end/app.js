@@ -16,13 +16,13 @@ app.use(cors())
 app.use(express.json())
 
 // register
-app.use("/api/v1", router)
+app.use("/api/v1/", router);
 
 //survey
-app.use("/api/v1/survey", Authorise, survey);
+app.use("/api/v1/", Authorise, survey);
 
 //questions
-app.use("/api/v1/question", Authorise, questions);
+app.use("/api/v1/", Authorise, questions);
 
 //theme router
 app.use('/api/v1/themes', Authorise, themeRouter)

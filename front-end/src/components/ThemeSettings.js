@@ -20,17 +20,6 @@ function ThemeSettings({ save, close }) {
     save(newTheme);
     close();
   };
-  useEffect(() => {
-    const themeCSS = document.createElement("link");
-    themeCSS.rel = "stylesheet";
-    themeCSS.type = "text/css";
-    themeCSS.href = `../src/${name}.css`;
-    document.head.appendChild(themeCSS);
-
-    return () => {
-      document.head.removeChild(themeCSS);
-    };
-  }, [name]);
 
   const handleCancel = () => {
     close();

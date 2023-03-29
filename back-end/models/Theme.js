@@ -11,8 +11,8 @@ const themeSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    default: 'Survey',
-    enum: ['Survey']
+    default: 'survey',
+    enum: ['survey']
 
   },
   formType: {
